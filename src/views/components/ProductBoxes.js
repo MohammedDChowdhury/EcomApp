@@ -13,37 +13,34 @@ const ProductBoxes = () => {
             uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
           }}
         />
-        {/*laptop img*/}ProArt Studiobook
+        <Text> ProArt Studiobook </Text>
       </View>
       <View style={styles.box2}>
-        {' '}
         <Image
           style={styles.bigImg}
           source={{
             uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
           }}
         />
-        Zenbook Duo
+        <Text> Zenbook Duo</Text>
       </View>
       <View style={styles.box3}>
-        {' '}
         <Image
           style={styles.bigImg}
           source={{
             uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
           }}
         />
-        Zenbook 13 OLED
+        <Text> Zenbook 13 OLED </Text>
       </View>
       <View style={styles.box4}>
-        {' '}
         <Image
           style={styles.bigImg}
           source={{
             uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
           }}
         />
-        Zenbook Pro Duo
+        <Text> Zenbook Pro Duo</Text>
       </View>
     </View>
   );
@@ -71,10 +68,30 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
   },
-  box1: {backgroundColor: COLOURS.grey, paddingRight: 10},
-  box2: {backgroundColor: COLOURS.grey, paddingRight: 10},
-  box3: {backgroundColor: COLOURS.grey, paddingRight: 10},
-  box4: {backgroundColor: COLOURS.grey, paddingRight: 10},
+  box1: {
+    backgroundColor: COLOURS.grey,
+    flexBasis: '35%',
+    marginBottom: 10,
+    fontSize: '2.3vh',
+  },
+  box2: {
+    backgroundColor: COLOURS.blue,
+    flexBasis: '35%',
+    marginBottom: 10,
+    fontSize: '2.3vh',
+  },
+  box3: {
+    backgroundColor: COLOURS.red,
+    flexBasis: '35%',
+    marginBottom: 10,
+    fontSize: '2.3vh',
+  },
+  box4: {
+    backgroundColor: COLOURS.yellow,
+    flexBasis: '35%',
+    marginBottom: 10,
+    fontSize: '2.3vh',
+  },
 });
 
 export default ProductBoxes;

@@ -5,7 +5,10 @@ const COLOURS = {
   blue: '#5D5FEE',
   grey: '#BABBC3',
   light: '#F3F4FB',
-  darkBlue: '#7978B5',
+  darkBlue: '#031c6e',
   red: 'red',
+  yellow: '#fafa02',
+  lightGrey: '#e0e0e0',
+  orange: '#f09116',
 };
 export default COLOURS;
