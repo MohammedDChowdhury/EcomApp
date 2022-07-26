@@ -10,5 +10,7 @@ const COLOURS = {
   yellow: '#fafa02',
   lightGrey: '#e0e0e0',
   orange: '#f09116',
+  yellowHsl: 'hsl(50, 77%, 88%)',
+  lightGreyHsl: 'hsl(41, 0%, 92%)',
 };
 export default COLOURS;

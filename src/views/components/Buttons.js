@@ -74,8 +74,8 @@ const styles = StyleSheet.create({
     borderRadius: 50,
   },
   turnOn: {
-    height: 29,
-    width: '50%',
+    height: 29.5,
+    width: '47.5%',
     backgroundColor: COLOURS.darkBlue,
     marginVertical: 20,
     justifyContent: 'center',
@@ -89,8 +89,8 @@ const styles = StyleSheet.create({
   },
   chat: {
     height: 29,
-    width: '50%',
-    backgroundColor: COLOURS.lightGrey,
+    width: '45%',
+    backgroundColor: COLOURS.lightGreyHsl,
     marginVertical: 20,
     justifyContent: 'center',
     alignItems: 'center',
@@ -109,13 +109,13 @@ const styles = StyleSheet.create({
   TurnOnText: {
     color: COLOURS.white,
     fontWeight: 'bold',
-    fontSize: 14,
+    fontSize: 13,
     opacity: 0.8,
   },
   chatText: {
     color: COLOURS.darkBlue,
     fontWeight: 'bold',
-    fontSize: 14,
+    fontSize: 13,
     opacity: 0.8,
   },
   chatIcon: {
