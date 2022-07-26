@@ -23,7 +23,7 @@ export function TurnOnButton({title, onPress = () => {}}) {
       onPress={onPress}
       activeOpacity={0.7}>
       <Text style={styles.TurnOnText}>
-        {title} <Icon name={'chat-processing'} style={styles.turnOnIcon} />
+        {title} <Icon name={'bell-outline'} style={styles.turnOnIcon} />
       </Text>
     </TouchableOpacity>
   );
@@ -122,14 +122,14 @@ const styles = StyleSheet.create({
     margin: 1,
     height: 50,
     width: 50,
-    color: 'green',
-    fontSize: 15,
+
+    fontSize: 18,
   },
   turnOnIcon: {
     margin: 1,
     height: 50,
     width: 50,
-    color: 'red',
+
     fontSize: 15,
   },
 });

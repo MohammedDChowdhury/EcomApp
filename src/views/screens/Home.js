@@ -19,7 +19,7 @@ const Home = () => {
       <View style={styles.buttonsAdjustment}>
         <TurnOnButton title={'Turn on'} />
 
-        <ChatButton title={'Chat'} />
+        <ChatButton title={'Chat '} />
       </View>
       <Icon name={'chat-processing'} style={styles.icon} />
       <Filters />
