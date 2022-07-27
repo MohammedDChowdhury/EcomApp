@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import {View, StyleSheet, Text} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../components/Header';
 import {ChatButton, TurnOnButton} from '../components/Buttons';
 import Filters from '../components/Filters';
@@ -8,10 +8,16 @@ import ProductBoxes from '../components/ProductBoxes';
 import COLOURS from '../../conts/colours';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {Circle, Circle2, Circle3, Circle4} from '../components/Circle';
 
 // import {mdiChatProcessing} from '@mdi/js';
 
 const Home = () => {
+  const [prodIsActive, setProdIsActive] = useState(false); // sets colour
+  const [newIsActive, setNewIsActive] = useState(false); // sets colour
+  const [popIsActive, setPopIsActive] = useState(false); // sets colour
+  const [categIsActive, setCategIsActive] = useState(false); // sets colour
+
   return (
     <View style={styles.container}>
       <View style={styles.headerAdjustment}>
@@ -23,23 +29,20 @@ const Home = () => {
         <ChatButton title={'Chat '} />
       </View>
 
-      <Filters />
-      {/* {productIsActive ? (
-        ''
-      ) : (
-        <View
-          style={{
-            width: 10,
-            height: 10,
-            backgroundColor: COLOURS.black,
-            alignItems: 'flex-end',
-            borderRadius: 70,
-            borderWidth: 1,
-            borderColor: 'black',
-            borderStyle: 'solid',
-            color: 'black',
-          }}></View>
-      )} */}
+      <Filters
+        prodIsActive={prodIsActive}
+        setProdIsActive={setProdIsActive}
+        newIsActive={newIsActive}
+        setNewIsActive={setNewIsActive}
+        popIsActive={popIsActive}
+        setPopIsActive={setPopIsActive}
+        categIsActive={categIsActive}
+        setCategIsActive={setCategIsActive}
+      />
+      {prodIsActive ? '' : <Circle />}
+      {newIsActive ? '' : <Circle2 />}
+      {popIsActive ? '' : <Circle3 />}
+      {categIsActive ? '' : <Circle4 />}
 
       <ProductBoxes />
     </View>
