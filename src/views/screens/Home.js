@@ -39,10 +39,10 @@ const Home = () => {
         categIsActive={categIsActive}
         setCategIsActive={setCategIsActive}
       />
-      {prodIsActive ? '' : <Circle />}
-      {newIsActive ? '' : <Circle2 />}
-      {popIsActive ? '' : <Circle3 />}
-      {categIsActive ? '' : <Circle4 />}
+      {prodIsActive ? <Circle /> : ''}
+      {newIsActive ? <Circle2 /> : ''}
+      {popIsActive ? <Circle3 /> : ''}
+      {categIsActive ? <Circle4 /> : ''}
 
       <ProductBoxes />
     </View>
@@ -50,11 +50,15 @@ const Home = () => {
 };
 const styles = StyleSheet.create({
   container: {
+    width: '100%',
+    height: '100%',
     alignContent: 'center',
     flex: 1,
     alignSelf: 'center',
     // justifyContent: 'center'
     backgroundColor: COLOURS.grey,
+
+    // color: COLOURS.red,
     // backgroundColor: '#ddd'
   },
   buttonsAdjustment: {

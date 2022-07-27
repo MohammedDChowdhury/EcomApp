@@ -38,7 +38,7 @@ const Filters = props => {
             height: 25,
             fontSize: 15,
             fontWeight: 'bold',
-            color: props.prodIsActive ? COLOURS.grey : COLOURS.black,
+            color: props.prodIsActive ? COLOURS.black : COLOURS.grey,
           }}>
           Products
         </Text>
@@ -52,7 +52,7 @@ const Filters = props => {
             fontSize: 15,
             marginLeft: 20,
             fontWeight: 'bold',
-            color: props.newIsActive ? COLOURS.grey : COLOURS.black,
+            color: props.newIsActive ? COLOURS.black : COLOURS.grey,
           }}>
           Newest
         </Text>
@@ -65,7 +65,7 @@ const Filters = props => {
             fontSize: 15,
             marginLeft: 20,
             fontWeight: 'bold',
-            color: props.popIsActive ? COLOURS.grey : COLOURS.black,
+            color: props.popIsActive ? COLOURS.black : COLOURS.grey,
           }}>
           Popular
         </Text>
@@ -78,7 +78,7 @@ const Filters = props => {
             fontSize: 15,
             marginLeft: 20,
             fontWeight: 'bold',
-            color: props.categIsActive ? COLOURS.grey : COLOURS.black,
+            color: props.categIsActive ? COLOURS.black : COLOURS.grey,
           }}>
           Category
         </Text>

@@ -10,7 +10,6 @@ import Home from './src/views/screens/Home';
 const App = () => {
   return (
     <View styles={styles.container}>
-      <Text>App</Text>
       <Home />
     </View>
   );
