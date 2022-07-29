@@ -4,6 +4,7 @@ import React from 'react';
 import {StyleSheet, TouchableOpacity, Text} from 'react-native';
 import COLOURS from '../../conts/colours';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {useNavigation} from '@react-navigation/native';
 
 // import {chatbubble-ellipses-outline} from '@mdi/js';
 export function SmallButton({title, onPress = () => {}}) {
@@ -38,6 +39,17 @@ export function ChatButton({title, onPress = () => {}}) {
     </TouchableOpacity>
   );
 }
+export function NavButton({screenName}) {
+  const navigation = useNavigation();
+  return (
+    <TouchableOpacity
+      style={styles.small}
+      onPress={() => navigation.navigate(screenName)}
+      activeOpacity={0.7}>
+      <Icon name={'arrow-right'} style={styles.arrowIcon} />
+    </TouchableOpacity>
+  );
+}
 
 export function BigButton({title, onPress = () => {}}) {
   return (
@@ -63,15 +75,18 @@ const styles = StyleSheet.create({
     borderRadius: 50,
   },
   small: {
-    height: 27.5,
-    width: '50%',
-    backgroundColor: COLOURS.darkBlue,
-    marginVertical: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderWidth: 1,
-    borderColor: 'rgba(0,0,0,0.2)',
-    borderRadius: 50,
+    justifyContent: 'flex-start',
+  },
+  arrowIcon: {
+    opacity: 10,
+    padding: 2,
+    width: '70%',
+    borderColor: COLOURS.black,
+    backgroundColor: COLOURS.lightGreyHsl,
+    borderRadius: 5,
+    marginRight: 13,
+    fontSize: 20,
+    color: COLOURS.pink,
   },
   turnOn: {
     height: 29.5,

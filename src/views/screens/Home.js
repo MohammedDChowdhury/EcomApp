@@ -2,7 +2,7 @@
 import {View, StyleSheet, Text} from 'react-native';
 import React, {useState} from 'react';
 import Header from '../components/Header';
-import {ChatButton, TurnOnButton} from '../components/Buttons';
+import {ChatButton, TurnOnButton, NavButton} from '../components/Buttons';
 import Filters from '../components/Filters';
 import ProductBoxes from '../components/ProductBoxes';
 import COLOURS from '../../conts/colours';
@@ -12,7 +12,7 @@ import {Circle, Circle2, Circle3, Circle4} from '../components/Circle';
 
 // import {mdiChatProcessing} from '@mdi/js';
 
-const Home = () => {
+const Home = ({Navigation}) => {
   const [prodIsActive, setProdIsActive] = useState(false); // sets colour
   const [newIsActive, setNewIsActive] = useState(false); // sets colour
   const [popIsActive, setPopIsActive] = useState(false); // sets colour
@@ -55,8 +55,8 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     flex: 1,
     alignSelf: 'center',
+    backgroundColor: COLOURS.white,
     // justifyContent: 'center'
-    backgroundColor: COLOURS.grey,
 
     // color: COLOURS.red,
     // backgroundColor: '#ddd'
@@ -64,37 +64,18 @@ const styles = StyleSheet.create({
   buttonsAdjustment: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginTop: '45.5%',
+    marginTop: '0%',
     marginLeft: '30%',
-    marginBottom: '15%',
+
     marginRight: 125,
   },
-  // filterAdjustment: {
-  // flexDirection: 'row',
-  // justifyContent: 'center',
-  // marginTop: '2%',
-  // backgroundColor: COLOURS.red,
-  // flex: 1,
-  // marginBottom: '30%',
-  // marginRight: 125,
-  // },
-  // icon: {
-  //   margin: 1,
-  //   height: 50,
-  //   width: 50,
-  //   color: 'green',
-  //   fontSize: 30,
-  // },
-  // textTopSeller: {
-  //   color: COLOURS.black,
-  //   fontWeight: 'bold',
-  //   fontSize: 14,
-  //   backgroundColor: COLOURS.orange,
+  // navButtonAdjustment: {
+  //   width: 10,
   // },
 
-  // headerAdjustment: {
-  //   margin: 10,
-  // },
+  headerAdjustment: {
+    marginTop: 0,
+  },
 });
 
 export default Home;

@@ -12,5 +12,6 @@ const COLOURS = {
   orange: '#f09116',
   yellowHsl: 'hsl(50, 77%, 88%)',
   lightGreyHsl: 'hsl(41, 0%, 92%)',
+  pink: '#e203ff',
 };
 export default COLOURS;

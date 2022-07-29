@@ -5,30 +5,6 @@ import COLOURS from '../../conts/colours';
 import Circle from './Circle';
 
 const Filters = props => {
-  // // const [isBold, setIsBold] = useState('normal');
-  // const [productIsActive, setProductIsActive] = useState(false); // sets colour
-  // const [newestIsActive, setNewestIsActive] = useState(false); // sets colour
-  // const [popularIsActive, setPopularIsActive] = useState(false); // sets colour
-  // const [categoryIsActive, setCategoryIsActive] = useState(false); // sets colour
-
-  // const productsOnPress = () => {
-  //   // setProductIsActive(current => !current);
-  //   props.setProdIsActive(current1 => !current1);
-  // };
-  // const newestOnPress = () => {
-  //   // setNewestIsActive(current2 => !current2);
-  //   props.setNewIsActive(current2 => !current2);
-  //   // setProductIsActive()
-  // };
-  // const popularOnPress = () => {
-  //   // setPopularIsActive(current3 => !current3);
-  //   props.setProdIsActive(current3 => !current3);
-  // };
-  // const categoryOnPress = () => {
-  //   // setCategoryIsActive(current4 => !current4);
-  //   props.setProdIsActive(current4 => !current4);
-  // };
-
   return (
     <View style={styles.container}>
       <TouchableOpacity
@@ -91,10 +67,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     // justifyContent: 'center',
     // alignContent: 'center',
-    flex: 1,
+
     justifyContent: 'space-around',
     paddingTop: 20,
-    paddingBottom: 30,
+
+    marginBottom: 6,
+    // backgroundColor: COLOURS.red,
     // paddingStart: 0,
     // paddingRight: 0,
   },

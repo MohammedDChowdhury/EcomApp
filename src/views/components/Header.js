@@ -21,11 +21,10 @@ const Header = () => {
 const styles = StyleSheet.create({
   container: {
     // width: '65%',
-
+    backgroundColor: COLOURS.white,
     // marginLeft: 'auto',
     // marginRight: 'auto',
     justifyContent: 'center',
-    backgroundColor: COLOURS.red,
   },
   tinyLogo: {
     width: 50,
@@ -34,8 +33,8 @@ const styles = StyleSheet.create({
   logo: {
     width: 68,
     height: 58,
-    marginBottom: '1%',
-    marginTop: '40%',
+    marginBottom: '0%',
+    marginTop: '5%',
 
     marginLeft: '42%',
 
