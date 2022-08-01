@@ -21,7 +21,7 @@ const Home = ({Navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.headerAdjustment}>
-        <Header />
+        <Header title1={'Top Seller 🔥'} title2={'Asus Official Store'} />
       </View>
       <View style={styles.buttonsAdjustment}>
         <TurnOnButton title={'Turn on'} />

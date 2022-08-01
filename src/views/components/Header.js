@@ -4,7 +4,7 @@ import React from 'react';
 import COLOURS from '../../conts/colours';
 import {ChatButton} from './Buttons';
 
-const Header = () => {
+const Header = ({title1, title2}) => {
   return (
     <View style={styles.container}>
       <Image
@@ -12,8 +12,8 @@ const Header = () => {
         source={require('E:/React-Native/EcomApp/assets/asus-logo-img.png')}
       />
       <View>
-        <Text style={styles.textTopSeller}>Top Seller 🔥</Text>
-        <Text style={styles.textTitle}>Asus Official Store</Text>
+        <Text style={styles.textTopSeller}>{title1}</Text>
+        <Text style={styles.textTitle}>{title2}</Text>
       </View>
     </View>
   );

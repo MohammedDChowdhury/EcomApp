@@ -39,6 +39,19 @@ export function ChatButton({title, onPress = () => {}}) {
     </TouchableOpacity>
   );
 }
+export function AskSellerButton({title, onPress = () => {}}) {
+  return (
+    <TouchableOpacity
+      style={styles.askSeller}
+      onPress={onPress}
+      activeOpacity={0.7}>
+      <Text style={styles.chatText}>
+        {title}
+        <Icon name={'chat-processing-outline'} style={styles.chatIcon} />
+      </Text>
+    </TouchableOpacity>
+  );
+}
 export function NavButton({screenName}) {
   const navigation = useNavigation();
   return (
@@ -47,6 +60,17 @@ export function NavButton({screenName}) {
       onPress={() => navigation.navigate(screenName)}
       activeOpacity={0.7}>
       <Icon name={'arrow-right'} style={styles.arrowIcon} />
+    </TouchableOpacity>
+  );
+}
+export function NavButton2({screenName}) {
+  const navigation = useNavigation();
+  return (
+    <TouchableOpacity
+      style={styles.small}
+      onPress={() => navigation.navigate(screenName)}
+      activeOpacity={0.7}>
+      <Icon name={'arrow-left'} style={styles.arrowIcon2} />
     </TouchableOpacity>
   );
 }
@@ -88,6 +112,18 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: COLOURS.pink,
   },
+  arrowIcon2: {
+    opacity: 10,
+    padding: 2,
+    width: '90%',
+    marginTop: 15,
+    borderColor: COLOURS.black,
+    marginLeft: 15,
+    borderRadius: 5,
+
+    fontSize: 25,
+    color: COLOURS.black,
+  },
   turnOn: {
     height: 29.5,
     width: '47.5%',
@@ -115,6 +151,19 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginLeft: 10,
     marginTop: 20,
+  },
+  askSeller: {
+    height: 29,
+    width: '25%',
+    backgroundColor: COLOURS.lightGreyHsl,
+    marginVertical: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    opacity: 10,
+    padding: 1,
+    borderColor: COLOURS.grey,
+    borderRadius: 5,
+    marginRight: 15,
   },
   text: {
     color: COLOURS.white,
