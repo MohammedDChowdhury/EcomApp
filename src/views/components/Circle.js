@@ -74,6 +74,57 @@ export function Circle4() {
       }}></View>
   );
 }
+export function CircleOverview() {
+  return (
+    <View
+      style={{
+        width: 10,
+        height: 10,
+        backgroundColor: COLOURS.black,
+        borderRadius: 70,
+        borderWidth: 1,
+        borderColor: 'black',
+        borderStyle: 'solid',
+        color: 'black',
+        marginLeft: '13%',
+        marginTop: -8,
+      }}></View>
+  );
+}
+export function CircleSpecification() {
+  return (
+    <View
+      style={{
+        width: 10,
+        height: 10,
+        backgroundColor: COLOURS.black,
+        borderRadius: 70,
+        borderWidth: 1,
+        borderColor: 'black',
+        borderStyle: 'solid',
+        color: 'black',
+        marginLeft: '50%',
+        marginTop: -8,
+      }}></View>
+  );
+}
+export function CircleReview() {
+  return (
+    <View
+      style={{
+        width: 10,
+        height: 10,
+        backgroundColor: COLOURS.black,
+        borderRadius: 70,
+        borderWidth: 1,
+        borderColor: 'black',
+        borderStyle: 'solid',
+        color: 'black',
+        marginLeft: '86%',
+        marginTop: -8,
+      }}></View>
+  );
+}
 // import {chatbubble-ellipses-outline} from '@mdi/js';
 
 const styles = StyleSheet.create({
