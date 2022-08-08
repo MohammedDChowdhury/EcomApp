@@ -17,6 +17,16 @@ export function SmallButton({title, onPress = () => {}}) {
     </TouchableOpacity>
   );
 }
+export function SendMessageButton({onPress = () => {}}) {
+  return (
+    <TouchableOpacity
+      style={styles.sendMessageButton}
+      onPress={onPress}
+      activeOpacity={0.7}>
+      <Icon name={'send'} style={styles.messageIcon} />
+    </TouchableOpacity>
+  );
+}
 export function TurnOnButton({title, onPress = () => {}}) {
   return (
     <TouchableOpacity
@@ -39,11 +49,12 @@ export function ChatButton({title, onPress = () => {}}) {
     </TouchableOpacity>
   );
 }
-export function AskSellerButton({title, onPress = () => {}}) {
+export function AskSellerButton({screenName, title}) {
+  const navigation = useNavigation();
   return (
     <TouchableOpacity
       style={styles.askSeller}
-      onPress={onPress}
+      onPress={() => navigation.navigate(screenName)}
       activeOpacity={0.7}>
       <Text style={styles.chatText}>
         {title}
@@ -71,6 +82,26 @@ export function LinkButton({title1, title2, onPress = () => {}}) {
     </TouchableOpacity>
   );
 }
+export function ProductButton({title1, title2, onPress = () => {}}) {
+  return (
+    <TouchableOpacity
+      style={styles.productButton}
+      onPress={onPress}
+      activeOpacity={0.7}>
+      <Image
+        style={styles.smallImg}
+        source={require('E:/React-Native/EcomApp/assets/pro-art-studiobook.png')}
+      />
+
+      <Text style={styles.textContainer2}>
+        <Text style={styles.productText}>{title1} </Text>
+        <Text style={styles.smallText2}>{title2}</Text>
+      </Text>
+
+      <Text style={styles.priceProduct}>$2338,1 </Text>
+    </TouchableOpacity>
+  );
+}
 export function MoreButton({onPress = () => {}}) {
   return (
     <TouchableOpacity
@@ -91,6 +122,27 @@ export function AddToCartButton({title, onPress = () => {}}) {
     </TouchableOpacity>
   );
 }
+export function NextButton({onPress = () => {}}) {
+  return (
+    <TouchableOpacity
+      style={styles.small}
+      onPress={onPress}
+      activeOpacity={0.7}>
+      <Icon name={'arrow-right'} style={styles.blueArrowIcon} />
+    </TouchableOpacity>
+  );
+}
+export function PreviousButton({onPress = () => {}}) {
+  return (
+    <TouchableOpacity
+      style={styles.small}
+      onPress={onPress}
+      activeOpacity={0.7}>
+      <Icon name={'arrow-left'} style={styles.greyArrowIcon} />
+    </TouchableOpacity>
+  );
+}
+
 export function NavButton({screenName}) {
   const navigation = useNavigation();
   return (
@@ -165,16 +217,59 @@ const styles = StyleSheet.create({
   },
   arrowIcon3: {
     opacity: 10,
-    padding: 2,
+    padding: 4,
     marginLeft: '25%',
     marginRight: '5%',
     marginTop: '4%',
+    width: '8.3%',
     borderColor: COLOURS.black,
     backgroundColor: COLOURS.white,
-    borderRadius: 5,
+    borderRadius: 8,
     height: 28,
     fontSize: 20,
     color: COLOURS.pink,
+  },
+  priceProduct: {
+    padding: 4,
+
+    marginRight: '2%',
+    marginTop: '4%',
+    width: '20%',
+    borderColor: COLOURS.black,
+    backgroundColor: COLOURS.white,
+    borderRadius: 8,
+    height: 28,
+    color: COLOURS.black,
+    fontWeight: 'bold',
+    fontSize: 14,
+    opacity: 0.8,
+  },
+  blueArrowIcon: {
+    padding: 2,
+    width: '70%',
+    borderColor: COLOURS.black,
+    backgroundColor: COLOURS.darkBlue,
+    borderRadius: 15,
+    marginRight: 20,
+    marginLeft: -10,
+    fontSize: 20,
+    marginTop: 10,
+
+    color: COLOURS.white,
+  },
+  greyArrowIcon: {
+    opacity: 0.5,
+    padding: 2,
+    width: '77%',
+    borderColor: COLOURS.black,
+    backgroundColor: COLOURS.lightGrey,
+    borderRadius: 20,
+    marginRight: '-6.5%',
+    marginLeft: 30,
+    fontSize: 20,
+    marginTop: 10,
+
+    color: COLOURS.darkBlue,
   },
   downIcon: {
     opacity: 10,
@@ -246,6 +341,23 @@ const styles = StyleSheet.create({
     borderColor: COLOURS.grey,
     borderRadius: 10,
   },
+  productButton: {
+    flexDirection: 'row',
+    height: '9.5%',
+
+    flexWrap: 'wrap',
+    width: '80%',
+    backgroundColor: COLOURS.white,
+    marginTop: 17,
+    marginLeft: 10,
+    alignContent: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    opacity: 10,
+
+    borderColor: COLOURS.grey,
+    borderRadius: 10,
+  },
   moreButton: {},
   text: {
     color: COLOURS.white,
@@ -258,7 +370,20 @@ const styles = StyleSheet.create({
     fontSize: 14,
     opacity: 0.8,
   },
+  productText: {
+    color: COLOURS.black,
+    fontWeight: 'bold',
+    fontSize: 15,
+    opacity: 0.8,
+  },
   smallText: {
+    fontSize: 12,
+    fontWeight: 'bold',
+    color: COLOURS.grey,
+
+    // fontFamily: 'calibri',
+  },
+  smallText2: {
     fontSize: 12,
     fontWeight: 'bold',
     color: COLOURS.grey,
@@ -291,6 +416,16 @@ const styles = StyleSheet.create({
 
     fontSize: 15,
   },
+  messageIcon: {
+    marginRight: 12,
+    marginBottom: 10,
+    marginTop: -8,
+    marginLeft: -5,
+    height: 50,
+    width: 50,
+    color: COLOURS.white,
+    fontSize: 15,
+  },
   logo: {
     width: '19.5%',
     height: 52,
@@ -308,7 +443,18 @@ const styles = StyleSheet.create({
     borderColor: COLOURS.darkBlue,
     borderRadius: 10,
 
-    marginTop: 20,
+    marginTop: '10%',
+    marginBottom: '5%',
+  },
+  sendMessageButton: {
+    height: '5%',
+    width: '5%',
+    backgroundColor: COLOURS.darkBlue,
+    marginLeft: '50%',
+
+    padding: 20,
+    borderColor: COLOURS.darkBlue,
+    borderRadius: 10,
   },
   textContainer: {
     flexDirection: 'column',
@@ -316,5 +462,23 @@ const styles = StyleSheet.create({
     marginLeft: 7,
 
     flex: 1,
+  },
+  textContainer2: {
+    flexDirection: 'column',
+
+    marginLeft: 10,
+
+    flex: 1,
+  },
+  smallImg: {
+    width: 58,
+    height: 48,
+
+    padding: 28,
+    marginLeft: '3%',
+    backgroundColor: COLOURS.lightGreyHsl,
+    borderRadius: 8,
+    // marginTop
+    // paddingBottom: 10,
   },
 });

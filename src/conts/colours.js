@@ -13,5 +13,6 @@ const COLOURS = {
   yellowHsl: 'hsl(50, 77%, 88%)',
   lightGreyHsl: 'hsl(41, 0%, 92%)',
   pink: '#e203ff',
+  blueMessage: '#125eb5',
 };
 export default COLOURS;

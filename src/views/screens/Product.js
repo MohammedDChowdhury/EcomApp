@@ -9,6 +9,8 @@ import {
   LinkButton,
   MoreButton,
   NavButton2,
+  NextButton,
+  PreviousButton,
 } from '../components/Buttons';
 import COLOURS from '../../conts/colours';
 import Titles from '../components/Titles';
@@ -28,7 +30,7 @@ const Product = () => {
     <View style={styles.container}>
       <View style={styles.topBtns}>
         <NavButton2 screenName="Home" />
-        <AskSellerButton title={'Ask Seller  '} />
+        <AskSellerButton title={'Ask Seller  '} screenName="Chat" />
       </View>
       <Titles title={'ProArt Studiobook'} title2={'Type: Pro 17 W700'} />
       <View style={styles.imgLayout}>
@@ -38,18 +40,20 @@ const Product = () => {
             source={require('E:/React-Native/EcomApp/assets/pro-art-studiobook.png')}
           />
           <View style={styles.smallContainer}>
+            <PreviousButton />
             <Image
-              style={styles.smallImg}
-              source={require('E:/React-Native/EcomApp/assets/pro-art-studiobook.png')}
+              style={styles.fadedImg}
+              source={require('E:/React-Native/EcomApp/assets/pro-art-studiobook-side.png')}
             />
             <Image
               style={styles.smallImg}
               source={require('E:/React-Native/EcomApp/assets/pro-art-studiobook.png')}
             />
             <Image
-              style={styles.smallImg}
-              source={require('E:/React-Native/EcomApp/assets/pro-art-studiobook.png')}
+              style={styles.fadedImg}
+              source={require('E:/React-Native/EcomApp/assets/pro-art-studiobook-closed.png')}
             />
+            <NextButton />
           </View>
         </View>
         <View>
@@ -119,7 +123,18 @@ const styles = StyleSheet.create({
     // marginTop
     // paddingBottom: 10,
   },
+  fadedImg: {
+    width: 58,
+    height: 48,
 
+    padding: 25,
+    marginLeft: '3%',
+    backgroundColor: COLOURS.lightGreyHsl,
+    borderRadius: 8,
+    opacity: 0.5,
+    // marginTop
+    // paddingBottom: 10,
+  },
   text: {
     fontSize: 14.5,
     fontWeight: 'bold',
@@ -132,7 +147,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: COLOURS.grey,
     marginLeft: '7%',
-    marginTop: 20,
+    marginTop: '43%',
+    marginBottom: 3,
   },
   price: {
     height: 25,
